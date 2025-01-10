@@ -1,0 +1,96 @@
+.benefit-content {
+  display: flex;
+  gap: 5%;
+  margin-top: 60px;
+  justify-content: space-between;
+  padding: 0 6.8%;
+  h3 {
+    margin-left: 43px;
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 769px) {
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.resume-group {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  margin-left: -7.5px;
+
+  &__item-header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-text {
+    margin-top: 12px;
+    margin-left: 43px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+}
+
+.group-circle {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-color: $main-orange;
+  border-radius: 50%;
+  margin-right: 20px;
+  & img {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+  }
+}
+
+.group-line {
+  display: block;
+  background-color: #000;
+  width: 42px;
+  height: 1px;
+}
+
+.group-small-circle {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: $main-orange;
+}
+
+.resume-group-wrapper {
+  display: flex;
+  max-width: 410px;
+}
+
+.resume-group-wrapper-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: $main-orange;
+  margin-top: 8px;
+}
+
+.line-side {
+  height: 100%;
+  width: 1px;
+  background-color: #000;
+}
