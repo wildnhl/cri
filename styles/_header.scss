@@ -81,3 +81,128 @@
   box-shadow: none;
 }
 
+.burger {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  padding: 20px 30px 0 0;
+  width: fit-content;
+  margin-left: auto;
+
+  &__line {
+    width: 30px;
+    height: 3px;
+    background-color: #151812;
+  }
+
+  &__line--big {
+    width: 36px;
+  }
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: $main-orange;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  transform: translateX(-100%);
+  transition: transform ease 0.3s;
+  width: 345px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 87px;
+    padding: 0 40px;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 24px;
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        font-size: 24px;
+      }
+    }
+    li::before {
+      display: inline-block;
+      content: '';
+      border: 1px solid #000;
+      border-radius: 100%;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 50px;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 769px) {
+    width: fit-content;
+    ul {
+      padding: 0 20px;
+    }
+  }
+}
+
+.burger-close {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  margin: 25px 25px 0 auto;
+  &__line {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #151812;
+    border-radius: 25px;
+    top: 50%;
+    right: -20%;
+    &--rotate45 {
+      transform: rotateZ(45deg);
+    }
+    &--rotate-45 {
+      transform: rotateZ(-45deg);
+    }
+  }
+}
+
+.active {
+  transform: translateX(0);
+}
+.burger-menu-light {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity ease 0.3s;
+}
+
+.active-light {
+  opacity: 1;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.75);
+}
